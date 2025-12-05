@@ -51,22 +51,28 @@ RFP Management
 
 Method	Endpoint	Description
 
-GET	/api/create-rfp	Fetch all RFPs
-POST	/api/create-rfp	Create a new RFP from requirements
-GET	/api/create-rfp/:id	Get details of a specific RFP
+GET	```bash
+/api/create-rfp
+```	Fetch all RFPs
+
+POST	```bash /api/create-rfp```
+Create a new RFP from requirements
+
+GET	```bash/api/create-rfp/:id```	
+Get details of a specific RFP
 
 Proposals
 
 Method	Endpoint	Description
 
-GET	/api/proposals	Fetch all received proposals
-POST	/api/proposals	Webhook endpoint for inbound emails (Resend)
-POST	/api/proposals/placeOrder/:rfpId/:proposalId	Award contract and email vendor
+GET	```bash /api/proposals```	Fetch all received proposals
+POST	```bash /api/proposals```	Webhook endpoint for inbound emails (Resend)
+POST	```bash /api/proposals/placeOrder/:rfpId/:proposalId```	Award contract and email vendor
 
 Vendors
 
 Method	Endpoint	Description
-GET	/api/vendors	List all available vendors
+GET	```bash /api/vendors```	List all available vendors
 
 🧠 Decisions & Assumptions
 
