@@ -1,5 +1,5 @@
 🚀 AI-Powered RFP Manager
-An intelligent Request for Proposal (RFP) management system that streamlines vendor communication and proposal analysis. This application allows users to create RFPs from natural language requirements, automatically score incoming proposals using AI, and manage vendor orders.
+An intelligent Request for Proposal (RFP) management system that streamlines vendor communication and proposal analysis. This application allows users to create RFPs from natural language requirements, automatically score incoming proposals using AI.
 
 🛠 Tech Stack
 Frontend: React.js
