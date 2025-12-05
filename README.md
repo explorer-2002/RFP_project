@@ -6,21 +6,24 @@ Frontend: React.js
 Backend: Express.js, Node.js
 Database: MongoDB (Atlas or Local)
 AI Engine: Google Gemini (Gemini 1.5 Flash)
-Email Services: Resend (Sending & Inbound Webhooks)
+Email Services: Resend (Sending & Inbound Webhook)
 
 ⚙️ Project Setup
 1. Installation
 Clone the repository and install dependencies for both the client and server.
 code
-Bash
 
 # Install Backend Dependencies
+```bash
 cd backend
 npm install
+```
 
 # Install Frontend Dependencies
+```bash
 cd ../frontend
 npm install
+```
 
 2. Environment Configuration
 Set up your environment variables by referring to the .env.example files in both the frontend and backend directories.
@@ -94,7 +97,7 @@ Solution: If the AI cannot extract the necessary proposal details from an incomi
 
 This project leveraged several AI tools to accelerate development and ensure high-quality output:
 
-Code & Debugging: Google AI Studio and Claude were used to generate boilerplate code, debug complex logic, and suggest architectural improvements.
+Code & Debugging: Google AI Studio and Claude were used to generate boilerplate code, debug complex logic.
 
 UI Design: AI tools assisted in creating a pixel-perfect, responsive UI.
 
