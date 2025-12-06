@@ -15,7 +15,6 @@ const fetchFullEmailFromResend = async (emailId) => {
     try {
         const { data } = await resend.emails.receiving.get(emailId);
 
-        console.log('Fetched email data from Resend:', data);
         return data;
 
     } catch (error) {
@@ -72,12 +71,9 @@ router.post('/', async (req, res) => {
             const email = payload?.data;
 
             const fullEmail = await fetchFullEmailFromResend(email?.email_id);
-            console.log('Full email fetched from Resend:', fullEmail);
 
             const rfpDetails = await Rfp.findOne({});
             const proposalObject = await getProposalDetailsFromEmail(fullEmail?.html, rfpDetails);
-
-            console.log('Extracted Proposal Object:', proposalObject);
 
             if (!proposalObject || Object.keys(proposalObject).length === 0) {
                 await sendEmailForRequestingProposalResend()
@@ -104,7 +100,6 @@ router.post('/', async (req, res) => {
                 });
             }
 
-            console.log('Extracted Proposal Object:', proposalObject);
             const savedProposal = await Proposals.create({
                 emailBody: fullEmail?.text,
                 ...proposalObject

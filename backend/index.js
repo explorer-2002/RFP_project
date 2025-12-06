@@ -41,7 +41,7 @@ const startServer = async () => {
     // Make sure MONGO_URI is defined in your .env file
     const conn = await mongoose.connect(process.env.MONGODB_URI);
     
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
+    console.log(`MongoDB Connected`);
 
     // Start Express Server only after DB connection
     app.listen(PORT, () => {
@@ -49,7 +49,7 @@ const startServer = async () => {
     });
 
   } catch (error) {
-    console.error(`Error executing MongoDB connection: ${error.message}`);
+    console.error(`Error executing MongoDB connection: ${error?.message}`);
     process.exit(1); // Exit process with failure
   }
 };

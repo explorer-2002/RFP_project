@@ -37,7 +37,6 @@ router.post('/', async (req, res) => {
     const { userPrompt, emails } = req.body;
 
     const rfpObject = await getRfpJsonFromUserPrompt(userPrompt);
-    console.log('Generated RFP Object:', rfpObject);
 
     await Rfp.create(rfpObject);
 
@@ -60,10 +59,9 @@ router.get('/', async (req, res) => {
             data: rfps
         });
     } catch (error) {
-        console.error('Error fetching RFPs:', error);
         return res.status(500).json({
             message: 'Error fetching RFP data',
-            error: error.message
+            error: error?.message
         });
     }
 });

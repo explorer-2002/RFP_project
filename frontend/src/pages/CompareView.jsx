@@ -31,7 +31,7 @@ export const CompareView = ({ selectedRfpId }) => {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             const data = await response.json();
-            console.log("Fetched Proposals for Comparison:", data);
+
             setProposals(data?.data || []);
             setIsLoading(false);
         } catch (error) {
@@ -80,7 +80,6 @@ export const CompareView = ({ selectedRfpId }) => {
             }
 
             const data = await response.json();
-            console.log("Fetched RFPs:", data);
 
             setRfp(data?.data || []);
             setIsLoading(false);
@@ -91,9 +90,6 @@ export const CompareView = ({ selectedRfpId }) => {
             fetchRfp();
         }
     }, [selectedRfpId]);
-
-    console.log("Proposals to compare:", proposals);
-    console.log("Proposal with max AI score:", proposalWithMaxAiScore);
 
     return (
         <div className="space-y-6">

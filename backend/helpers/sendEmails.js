@@ -18,7 +18,6 @@ export const sendEmails = async (emails, rfpObject) => {
       html: emailTemplate,
     });
 
-    console.log('Email sent successfully!', data);
   } catch (error) {
     console.error('Error sending email:', error);
   }
@@ -35,7 +34,6 @@ export const sendEmailForConfirmingOrder = async (senderName) => {
       html: emailTemplate,
     });
 
-    console.log('Email sent successfully!', data);
   } catch (error) {
     console.error('Error sending email:', error);
   }
@@ -52,7 +50,6 @@ export const sendEmailForRequestingProposalResend = async () => {
       html: emailTemplate,
     });
 
-    console.log('Resend request email sent successfully!', data);
   } catch (error) {
     console.error('Error sending email:', error);
   }

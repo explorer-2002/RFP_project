@@ -21,7 +21,5 @@ const vendors = [
 ]
 
 export const storeVendors = async () => {
-    // Placeholder function to store vendors
     const result = await Vendor.insertMany(vendors);
-    console.log(`${result.insertedCount} documents inserted`);
 }

@@ -37,7 +37,6 @@ export const RFPManagementApp = () => {
         }
 
         const data = await response.json();
-        console.log("Fetched RFPs:", data);
 
         setRfps(data?.data || []);
         setIsLoading(false);
@@ -74,8 +73,6 @@ export const RFPManagementApp = () => {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
 
-            const data = await response.json();
-            console.log("RFP Created Successfully:", data);
             toast.success("RFP created successfully!");
             setIsLoading(false);
 
@@ -102,7 +99,6 @@ export const RFPManagementApp = () => {
             }
 
             const data = await response.json();
-            console.log("Fetched Vendors:", data);
 
             setVendors(data?.data || []);
         }
